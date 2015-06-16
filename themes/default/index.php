@@ -5,9 +5,15 @@
 
             <div class="swiper-container swiper-parent">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide dark" style="background-image: url('themes/default/images/slider/swiper/1.jpg');"></div>
-                    <div class="swiper-slide dark" style="background-image: url('themes/default/images/slider/swiper/1.jpg');"></div>
-                    <div class="swiper-slide dark" style="background-image: url('themes/default/images/slider/swiper/1.jpg');"></div>
+                    <?php for($i=1;$i<5;$i++) {
+                        $file_name = 'public/uploads/index_slide_'.$i.'.jpg';
+                        if (file_exists($file_name)){
+                            $index_slide_url = 'index_slide_'.$i.'_url';
+                            $index_slide_url_true = $$index_slide_url;
+                        ?>
+                        <a href="<?php echo $index_slide_url_true['indexInfo_desc'];?>" class="swiper-slide dark" style="background-image: url(<?php echo $file_name; ?>);"></a>
+                    <?php }
+                    }?>
                 </div>
                 <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
                 <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
@@ -20,6 +26,8 @@
                         slidesPerView: 1,
                         grabCursor: true,
                         loop: true,
+                        autoplay : 3000,
+                        speed:1500,
                         onSwiperCreated: function(swiper){
                             $('[data-caption-animate]').each(function(){
                                 var $toAnimateElement = $(this);
@@ -102,7 +110,7 @@
                                     <h3>Icarecam简介</h3>
                                 </div>
 
-                                <p class="nobottommargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                                <p class="nobottommargin"><?php echo $index_brief['indexInfo_desc'];?></p>
                             </div>
 
                             <div class="col-md-3">
@@ -118,7 +126,7 @@
                     <div class="col_half nobottommargin">
                         <div class="feature-box media-box">
                             <div class="fbox-media">
-                                <img src="<?php echo base_url('public/uploads/').'/'.$v['goods_img'];?>" alt="Why choose Us?">
+                                <img src="<?php echo base_url('public/uploads/').'/'.$v['goods_img'];?>" alt="商品图片">
                             </div>
                             <div class="fbox-desc">
                                 <h3><a href="<?php echo site_url('goods/single').'/'. $v['goods_id'];?>"><?php echo $v['goods_name'];?></a></h3>
@@ -131,9 +139,9 @@
 
                 </div>
 
-                <div class="section parallax bottommargin-lg" style="background-image: url('themes/default/images/parallax/3.jpg'); padding: 100px 0;" data-stellar-background-ratio="0.3">
+                <div class="section parallax bottommargin-lg" style="background-image: url('themes/default/images/index_para.png'); padding: 100px 0;" data-stellar-background-ratio="0.3">
                     <div class="heading-block center nobottomborder nobottommargin">
-                        <h2><span>网站slogan?（可选）</span></h2>
+                        <h2><span style="color: #333"><?php echo $index_slogan['indexInfo_desc'];?></span></h2>
                     </div>
                 </div>
 
@@ -149,7 +157,7 @@
                                     <div class="col_three_fifth nobottommargin col_last">
 
                                         <div class="heading-block">
-                                            <h2>推荐视频（可选择数量）</h2>
+                                            <h2>推荐视频</h2>
                                         </div>
 
                                         <p><?php echo $a['videos_desc'];?></p>
@@ -163,7 +171,7 @@
                                     <div class="container clearfix">
 
                                         <div class="heading-block center">
-                                            <h2>Icarecam产品优势（可选）</h2>
+                                            <h2>Icarecam产品优势</h2>
                                         </div>
 
                                         <div class="clear bottommargin-sm"></div>
@@ -173,7 +181,7 @@
                                                     <a href="#"><i class="icon-bulb"></i></a>
                                                 </div>
                                                 <h3>优势1</h3>
-                                                <p>描述1  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                                                <p><?php echo $index_merit_1['indexInfo_desc'];?></p>
                                             </div>
                                         </div>
 
@@ -183,7 +191,7 @@
                                                     <a href="#"><i class="icon-heart2"></i></a>
                                                 </div>
                                                 <h3>优势2</h3>
-                                                <p>描述2  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                                                <p><?php echo $index_merit_2['indexInfo_desc'];?></p>
                                             </div>
                                         </div>
 
@@ -193,7 +201,7 @@
                                                     <a href="#"><i class="icon-note"></i></a>
                                                 </div>
                                                 <h3>优势3</h3>
-                                                <p>描述3  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi rem, facilis nobis voluptatum est voluptatem accusamus molestiae eaque perspiciatis mollitia.</p>
+                                                <p><?php echo $index_merit_3['indexInfo_desc'];?></p>
                                             </div>
                                         </div>
 

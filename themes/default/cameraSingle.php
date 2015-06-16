@@ -110,7 +110,7 @@
                                                         foreach ($params as $k => $v) {
                                                         echo "<tr><td>".$k."</td><td>".$v."</td></tr>";
                                                         }
-                                                    ?>
+                                                   ?>
                                                 </tbody>
                                             </table>
 

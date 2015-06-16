@@ -58,29 +58,30 @@ class Order extends Home_Controller {
 
 			#获取购物车总额
 			$data['goods_amount'] = $this->cart->total();
+            if($data['goods_amount']<100){
+                switch ($this->input->post('shipping')) {
+                    case '1':
+                        $data['shipping_method'] = '普通快递';
+                        $data['order_amount'] = $this->cart->total() + 10;
+                        break;
+
+                    case '2':
+                        $data['shipping_method'] = 'EMS';
+                        $data['order_amount'] = $this->cart->total() + 20;
+                        break;
+
+                    case '3':
+                        $data['shipping_method'] = '顺丰';
+                        $data['order_amount'] = $this->cart->total() + 30;
+                        break;
+                }
+            } else {
+                $data['shipping_method'] = '免运费';
+                $data['order_amount'] = $data['goods_amount'];
+            }
 
 			#记录快递方式 计算订单总额
-			switch ($this->input->post('shipping')) {
-				case '1':
-					$data['shipping_method'] = '普通快递';
-					$data['order_amount'] = $this->cart->total() + 10;
-					break;
 
-				case '2':
-					$data['shipping_method'] = 'EMS';
-					$data['order_amount'] = $this->cart->total() + 20;
-					break;
-
-				case '3':
-					$data['shipping_method'] = '顺丰';
-					$data['order_amount'] = $this->cart->total() + 30;
-					break;
-
-				default:
-					$data['shipping_method'] = '免运费';
-					$data['order_amount'] = $this->cart->total();
-					break;
-			}
 
 			#获取当前用户id
 			$session_name = $this->session->userdata('user');

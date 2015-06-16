@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-//视频模型
+//站点信息模型
 class SiteInfo_model extends CI_Model{
 	const TBL_siteInfo = 'siteInfo';
 

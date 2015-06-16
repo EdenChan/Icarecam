@@ -19,6 +19,8 @@
 						<li><a href="<?php echo site_url('admin/apps/add');?>">添加软件</a></li>
 					</ul>
 				</li>
+                <li><a href="<?php echo site_url('admin/indexInfo/index');?>"><i class="icon icon-bullhorn"></i> <span>首页信息管理</span></a>
+                </li>
 				<li><a href="<?php echo site_url('admin/siteInfo/index');?>"><i class="icon icon-bullhorn"></i> <span>网站信息管理</span></a>
 				</li>
 				<li><a href="<?php echo site_url('admin/user/index');?>"><i class="icon icon-user"></i> <span>会员管理</span></a>

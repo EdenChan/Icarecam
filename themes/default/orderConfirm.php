@@ -3,7 +3,8 @@
 ?>
 <script type="text/javascript">
     $(document).ready(function(){
-             $(".shippingMethod").click(function(){
+        if(<?php echo $this->cart->total();?><100) {
+            $(".shippingMethod").click(function(){
                 if($(this).attr('id')=="normal"){
                     $("#order_total").html(<?php echo $this->cart->total()+10;?>);
                 }
@@ -13,8 +14,14 @@
                 else if($(this).attr('id')=="shunfeng"){
                     $("#order_total").html(<?php echo $this->cart->total()+30;?>);
                 }
-             });
-         });
+            });
+        } else {
+            $(".order_shipping").hide();
+            $(".order_shipping_free").show();
+            $("#order_total").html(<?php echo $this->cart->total();?>);
+        }
+
+    });
 </script>
 <!-- Page Title
 		============================================= -->
@@ -134,7 +141,7 @@
                                 	<label for="order_postscripts">订单附言(可留空)：</label><br>
                                 	<textarea rows="5" cols="35" name="postscripts" id="postscripts"></textarea>
                                 </div>
-                                <div class="col_half col-last">
+                                <div class="col_half col-last order_shipping">
                                 	<label for="order_postscripts">快递方式：</label>
                                 		<input type="radio" name="shipping" class="shippingMethod" id="normal" value="1" checked="checked" />普通
                                 		<input type="radio" name="shipping" class="shippingMethod" id="ems" value="2" />EMS
@@ -142,6 +149,9 @@
                                 		<br><br>
                                 		<h3>订单总计 ￥<span class="amount color lead cart-total" id="order_total"><?php echo $this->cart->total()+10;?></span></h3>
                                 </div>
+                                <div class="col_half col-last order_shipping_free" style="display: none">
+                                    <h3>订单总计 ￥<span class="amount color lead cart-total" id="order_total"><?php echo $this->cart->total();?></span></h3>
+                                    <b>商品总价超过100元，本订单将享受免运费优惠</b></div>
 	                    <a href="<?php echo site_url('goods/all');?>" class="button button-3d fright">继续购物</a>
 	                    <input type="submit" class="button button-3d fright" value="提交订单" />
                     </form>
