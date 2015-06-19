@@ -40,6 +40,12 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
+                                        <label class="control-label">App简单描述：</label>
+                                        <div class="controls">
+                                            <textarea name="apps_brief" id="apps_brief" style="height:100px;"><?php echo $apps['apps_brief'];?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
                                         <label class="control-label">软件原图：</label>
                                         <div class="controls">
                                             <img src="<?php echo base_url('public/uploads/').'/'.$apps['apps_img'];?>" style="max-width:200px;max_height:200px;"/>

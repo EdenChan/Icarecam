@@ -5,9 +5,14 @@
     #格式转换 把参数字符串转换为参数数组
 	function str2arr ($str)
 	{
-	    $arr = str_replace(array("：","，"),array('"=>"','","'),'array("'.$str.'")');
-	    eval("\$arr"." = $arr;");
-	    return $arr;
+        $arr = explode("，",$str);
+        $r = array();
+        foreach ($arr as $val )
+        {
+            $t = explode("：",$val);
+            $r[$t[0]]= $t[1];
+        }
+        return $r;
 	}
 ?>
 <script>

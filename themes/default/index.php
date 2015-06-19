@@ -139,7 +139,7 @@
 
                 </div>
 
-                <div class="section parallax bottommargin-lg" style="background-image: url('themes/default/images/index_para.png'); padding: 100px 0;" data-stellar-background-ratio="0.3">
+                <div class="section parallax bottommargin-lg" style="background-image: url(<?php echo 'public/uploads/index_slogan_bg.jpg'; ?>); padding: 100px 0;" data-stellar-background-ratio="0.3">
                     <div class="heading-block center nobottomborder nobottommargin">
                         <h2><span style="color: #333"><?php echo $index_slogan['indexInfo_desc'];?></span></h2>
                     </div>
@@ -150,7 +150,7 @@
 
                                     <div class="col_two_fifth nobottommargin">
                                         <a href="#">
-                                            <iframe height=300 width=430 src="<?php echo $a['videos_src'];?>" frameborder=0 allowfullscreen></iframe>
+                                            <iframe height=300 width=350 src="<?php echo $a['videos_src'];?>" frameborder=0 allowfullscreen></iframe>
                                         </a>
                                     </div>
 
@@ -160,7 +160,7 @@
                                             <h2>推荐视频</h2>
                                         </div>
 
-                                        <p><?php echo $a['videos_desc'];?></p>
+                                        <p><?php echo $a['videos_brief'];?></p>
                                     </div>
                                     <?php endforeach;?>
                                     <div class="clear"></div>

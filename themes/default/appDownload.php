@@ -34,7 +34,7 @@ require_once 'header.php';
                                         <h2><a href="<?php echo site_url('apps/single') . '/' . $v['apps_id'];?>"><?php echo $v['apps_name'];?></a></h2>
                                     </div>
                                     <div class="entry-content">
-                                        <p><?php echo $v['apps_desc'];?></p>
+                                        <p><?php echo $v['apps_brief'];?></p>
                                         <a href="<?php echo site_url('apps/single') . '/' . $v['apps_id'];?>"class="button button-3d button-small button-rounded button-lime button-light">了解更多</a>
                                     </div>
                                 </div>

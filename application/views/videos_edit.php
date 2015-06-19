@@ -40,6 +40,12 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
+                                        <label class="control-label">视频简单描述：</label>
+                                        <div class="controls">
+                                            <textarea name="videos_brief" id="videos_brief" style="height:100px;"><?php echo $videos['videos_brief']?></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
                                     <?php if($videos['is_index']==1) {?>
                                         <label class="control-label">从首页移除：</label>
                                         <div class="controls">

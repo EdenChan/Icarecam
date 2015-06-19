@@ -35,7 +35,7 @@
                                     <h2><a href="<?php echo site_url('goods/single').'/'. $v['goods_id'];?>"><?php echo $v['goods_name'];?></a></h2>
                                 </div>
                                 <div class="entry-content">
-                                    <p><?php echo $v['goods_desc'];?></p>
+                                    <p><?php echo $v['goods_brief'];?></p>
                                     <a href="<?php echo site_url('goods/single').'/'. $v['goods_id'];?>" class="button button-3d button-small button-rounded button-lime button-light">了解更多</a>
                                 </div>
                             </div>

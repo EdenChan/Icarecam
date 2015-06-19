@@ -55,6 +55,7 @@ class Videos extends Admin_Controller{
 		$data['videos_src'] = $this->input->post('videos_src');
 		$data['is_index'] = $this->input->post('is_index');
 		$data['videos_desc'] = $this->input->post('videos_desc');
+		$data['videos_brief'] = $this->input->post('videos_brief');
 		$data['add_time'] = date("Y-m-d H:i:s");
 
 			if ($videos_id = $this->videos_model->add_videos($data)) {
@@ -98,6 +99,7 @@ class Videos extends Admin_Controller{
 		$data['is_index'] = $this->input->post('is_index');
 		$data['videos_desc'] = $this->input->post('videos_desc');
 		$data['videos_src'] = $this->input->post('videos_src');
+		$data['videos_brief'] = $this->input->post('videos_brief');
 		$data['add_time'] = date("Y-m-d H:i:s");
 
 		if ($videos_id = $this->videos_model->update_videos($data,$videos_id)) {

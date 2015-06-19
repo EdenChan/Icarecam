@@ -39,6 +39,12 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
+                                        <label class="control-label">App简单描述：</label>
+                                        <div class="controls">
+                                            <textarea name="apps_brief" id="apps_brief" style="height:100px;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
                                         <label class="control-label">上传App展示图片：</label>
                                         <div class="controls">
                                             <input type="file" name="apps_img" />

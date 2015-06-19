@@ -53,13 +53,14 @@ class Apps extends Admin_Controller{
 	public function insert(){
 		#获取提交的数据
 		$data['apps_name'] = $this->input->post('apps_name');
+		$data['apps_brief'] = $this->input->post('apps_brief');
 		$data['apps_desc'] = $this->input->post('apps_desc');
 		$data['add_time'] = date("Y-m-d H:i:s");
 
 		#完成上传文件
 		$config['upload_path'] = './public/uploads/';
 		$config['allowed_types'] = 'jpg|gif|png|rar|7z|zip';
-		$config['max_size'] = 70000;
+		$config['max_size'] = 500000;
 		$this->load->library('upload',$config);
 
 		if ($this->upload->do_upload('apps_img')) {
@@ -116,6 +117,7 @@ class Apps extends Admin_Controller{
 
 		$apps_id = $this->input->post('apps_id');
 		$data['apps_name'] = $this->input->post('apps_name');
+		$data['apps_brief'] = $this->input->post('apps_brief');
 		$data['apps_desc'] = $this->input->post('apps_desc');
 		$data['add_time'] = date("Y-m-d H:i:s");
 
@@ -143,7 +145,7 @@ class Apps extends Admin_Controller{
 
 		$config['upload_path'] = './public/uploads/';
 		$config['allowed_types'] = 'jpg|gif|png|rar|7z|zip';
-		$config['max_size'] = 70000;
+		$config['max_size'] = 500000;
 		$this->load->library('upload',$config);
 
 		if ($this->upload->do_upload('apps_img')) {
@@ -178,7 +180,7 @@ class Apps extends Admin_Controller{
 
 		$config['upload_path'] = './public/uploads/';
 		$config['allowed_types'] = 'jpg|gif|png|rar|7z|zip';
-		$config['max_size'] = 70000;
+		$config['max_size'] = 500000;
 		$this->load->library('upload',$config);
 
 		if ($this->upload->do_upload('apps_file')) {

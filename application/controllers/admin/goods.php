@@ -244,7 +244,7 @@ class Goods extends Admin_Controller{
 
 			$config['upload_path'] = './public/uploads/';
 			$config['allowed_types'] = 'jpg|gif|png';
-			$config['max_size'] = 20000;
+			$config['max_size'] = 200000;
 			$this->load->library('upload',$config);
 
 			if ($this->upload->do_upload('goods_img')) {
