@@ -1,22 +1,27 @@
 <?php
+
 /**
  * alipy支付接口
  *
  */
-class Alipay extends CI_Controller {
+class Alipay extends CI_Controller
+{
     private $alipay_config;
 
-    function __construct() {
+    function __construct()
+    {
         parent::__construct();
         $this->_init_config();
         $this->load->helper('url');
     }
 
-    function index() {
+    function index()
+    {
         $this->load->view('alipay');//装载支付视图页面，post到do_alipay
     }
 
-    function do_alipay() {
+    function do_alipay()
+    {
         require_once(APPPATH . 'third_party/alipay/lib/alipay_submit.class.php');
         //构造要请求的参数数组，无需改动
         $parameter = array(
@@ -61,7 +66,8 @@ class Alipay extends CI_Controller {
 
 
     //处理异步通知，只需要处理这个就行，因为当用户付款完毕x掉界面，同步通知就发布过去了，
-    function do_notify() {
+    function do_notify()
+    {
         require_once(APPPATH . 'third_party/alipay/lib/alipay_notify.class.php');
         //计算得出通知验证结果
         $alipayNotify = new AlipayNotify($this->alipay_config);
@@ -128,7 +134,8 @@ class Alipay extends CI_Controller {
 
     //同步通知处理，不要进行处理了，避免重复，因为不管怎么样，都会发异步通知
     //不过这里同步通知可以本地调试，可以调试好业务逻辑代码
-    function do_return() {
+    function do_return()
+    {
         require_once(APPPATH . 'third_party/alipay/lib/alipay_notify.class.php');
         $alipayNotify = new AlipayNotify($this->alipay_config);
         $verify_result = $alipayNotify->verifyReturn();
@@ -179,7 +186,8 @@ class Alipay extends CI_Controller {
     /**
      * 初始化支付宝配置，详细参数请根据自己实际接口修改
      */
-    private function _init_config() {
+    private function _init_config()
+    {
         //支付宝帐户
         //*******要配置的地方之一 收款账号*********
         $alipay_config['seller_emaill'] = 'xxxxxxxxxx';

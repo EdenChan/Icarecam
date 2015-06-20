@@ -4,14 +4,14 @@
     Replace your Fonts as necessary
 -----------------------------------------------------------------*/
 
-
-
 body,
 small,
 #primary-menu ul ul a,
 .wp-caption,
 .feature-box.fbox-center.fbox-italic p,
-.skills li .progress-percent .counter { font-family: 'Lato', sans-serif; }
+.skills li .progress-percent .counter {
+    font-family: 'Lato', sans-serif;
+}
 
 h1,
 h2,
@@ -29,7 +29,9 @@ h6,
 .counter,
 label,
 .wedding-head .first-name,
-.wedding-head .last-name { font-family: 'Raleway', sans-serif; }
+.wedding-head .last-name {
+    font-family: 'Raleway', sans-serif;
+}
 
 .entry-meta li,
 .entry-link span,
@@ -41,15 +43,17 @@ label,
 .team-title span,
 .before-heading,
 .wedding-head .first-name span,
-.wedding-head .last-name span { font-family: 'Crete Round', serif; }
-
+.wedding-head .last-name span {
+    font-family: 'Crete Round', serif;
+}
 
 /* ----------------------------------------------------------------
     You can change your Font Specific Settings here
 -----------------------------------------------------------------*/
 
-
-body { line-height: 1.5; }
+body {
+    line-height: 1.5;
+}
 
 h1,
 h2,
@@ -126,7 +130,9 @@ h6 {
     text-transform: uppercase;
 }
 
-.more-link { font-style: italic; }
+.more-link {
+    font-style: italic;
+}
 
 .comment-content .comment-author span {
     font-size: 12px;
@@ -134,7 +140,9 @@ h6 {
     font-style: italic;
 }
 
-.wp-caption { font-style: italic; }
+.wp-caption {
+    font-style: italic;
+}
 
 .button.button-desc {
     font-size: 22px;
@@ -149,9 +157,13 @@ h6 {
     text-transform: none;
 }
 
-.feature-box.fbox-center.fbox-italic p { font-style: italic; }
+.feature-box.fbox-center.fbox-italic p {
+    font-style: italic;
+}
 
-.testi-content p { font-style: italic; }
+.testi-content p {
+    font-style: italic;
+}
 
 .team-title span {
     font-weight: 400;
@@ -164,7 +176,9 @@ h6 {
     font-weight: 600;
 }
 
-.skills li .progress-percent .counter { font-weight: 400; }
+.skills li .progress-percent .counter {
+    font-weight: 400;
+}
 
 label {
     font-size: 13px;

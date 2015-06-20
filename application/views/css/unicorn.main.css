@@ -8,16 +8,17 @@
 
 /* Main */
 body {
-/*    overflow-x: hidden;*/
+    /*    overflow-x: hidden;*/
     margin-top: -9px;
     font-family: 微软雅黑 !important;
-    font-size:16px !important;
+    font-size: 16px !important;
 }
 
-label{
-    font-size:16px !important;
+label {
+    font-size: 16px !important;
 }
-.dataTables_length{
+
+.dataTables_length {
     display: none;
 }
 
@@ -25,14 +26,16 @@ h3 {
     margin-bottom: 0px;
     margin-top: 15px;
     text-align: center;
-    color:#ffffff;
-    font-weight:normal;
+    color: #ffffff;
+    font-weight: normal;
 }
+
 /*validate中的错误提示*/
-.error{
-    color:red;
+.error {
+    color: red;
 }
-th{
+
+th {
     font-size: 13px !important;
 }
 

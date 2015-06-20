@@ -3,14 +3,17 @@ date_default_timezone_set('Etc/GMT-8');
 
 //站点信息控制器
 
-class IndexInfo extends Admin_Controller {
+class IndexInfo extends Admin_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
         $this->load->model('indexInfo_model');
     }
 
-    public function index() {
+    public function index()
+    {
 
         $data['index_brief'] = $this->indexInfo_model->get_indexInfo_route('index_brief');
         $data['index_slogan'] = $this->indexInfo_model->get_indexInfo_route('index_slogan');
@@ -25,7 +28,8 @@ class IndexInfo extends Admin_Controller {
         $this->load->view('indexInfo_list.php', $data);
     }
 
-    public function update() {
+    public function update()
+    {
 
         $index_brief_id = $this->input->post('index_brief_id');
         $data_index_brief['indexInfo_desc'] = $this->input->post('index_brief_desc');
@@ -94,7 +98,8 @@ class IndexInfo extends Admin_Controller {
         }
     }
 
-    public function delImg() {
+    public function delImg()
+    {
         $i = $this->uri->segment(4, 0);
         if (@unlink('public/uploads/' . 'index_slide_' . $i . '.jpg')) {
             $data['message'] = '删除成功';

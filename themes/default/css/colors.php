@@ -1,13 +1,13 @@
 <?php
 
-header ("Content-Type:text/css");
+header("Content-Type:text/css");
 
 /** ===============================================================
  *
  *      Edit your Color Configurations below:
  *      You should only enter 6-Digits HEX Colors.
  *
- ================================================================== */
+ * ================================================================== */
 
 $color = "#1ABC9C"; // Change your Color Here
 
@@ -16,9 +16,10 @@ $color = "#1ABC9C"; // Change your Color Here
  *      Do not Edit anything below this line if you do not know
  *      what you are trying to do..!
  *
- ================================================================== */
+ * ================================================================== */
 
-function checkhexcolor($color) {
+function checkhexcolor($color)
+{
 
     return preg_match('/^#[a-f0-9]{6}$/i', $color);
 
@@ -28,13 +29,13 @@ function checkhexcolor($color) {
  *
  *      Primary Color Scheme
  *
- ================================================================== */
+ * ================================================================== */
 
-if( isset( $_GET[ 'color' ] ) AND $_GET[ 'color' ] != '' ) {
-    $color = "#" . $_GET[ 'color' ];
+if (isset($_GET['color']) AND $_GET['color'] != '') {
+    $color = "#" . $_GET['color'];
 }
 
-if( !$color OR !checkhexcolor( $color ) ) {
+if (!$color OR !checkhexcolor($color)) {
     $color = "#1ABC9C";
 }
 
@@ -42,9 +43,9 @@ if( !$color OR !checkhexcolor( $color ) ) {
 
 
 /* ----------------------------------------------------------------
-    Colors
+Colors
 
-    Replace the HEX Code with your Desired Color HEX
+Replace the HEX Code with your Desired Color HEX
 -----------------------------------------------------------------*/
 
 
@@ -229,21 +230,21 @@ ul.tab-nav.tab-nav2 li.ui-state-active a,
 
 @media only screen and (max-width: 991px) {
 
-    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
-    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
-    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
-    body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a,
-    #primary-menu ul ul li:hover > a,
-    #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title:hover > a,
-    #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: <?php echo $color; ?> !important; }
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover a,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current a,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover a,
+body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current a,
+#primary-menu ul ul li:hover > a,
+#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title:hover > a,
+#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: <?php echo $color; ?> !important; }
 
-    #page-menu nav { background-color: <?php echo $color; ?>; }
+#page-menu nav { background-color: <?php echo $color; ?>; }
 
 }
 
 
 @media only screen and (max-width: 767px) {
 
-    #portfolio-filter li a:hover { color: <?php echo $color; ?>; }
+#portfolio-filter li a:hover { color: <?php echo $color; ?>; }
 
 }
