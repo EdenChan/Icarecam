@@ -54,8 +54,8 @@ require_once 'header.php';
                         ============================================= -->
                         <div class="entry-content notopmargin">
                             <?php echo $apps['apps_desc']; ?><br>
-                            <a href="<?php echo base_url('public/uploads/') . '/' . $apps['apps_file']; ?>"
-                               class="button button-3d button-small button-rounded button-lime button-light">下载文件</a>
+<!--                            <a href="--><?php //echo base_url('public/uploads/') . '/' . $apps['apps_file']; ?><!--"-->
+<!--                               class="button button-3d button-small button-rounded button-lime button-light">下载文件</a>-->
                         </div>
 
                         <!-- Comments

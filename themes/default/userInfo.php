@@ -190,7 +190,7 @@ error_reporting(0);
                         <p>您还没有在Icarecam购买过商品，您可以去<a href="<?php echo site_url('goods/all'); ?>">商品页</a>挑选喜欢的商品</p>
                     </div>
                 <?php else: ?>
-                    <b>(请注意：已发货订单无法撤销)</b>
+<!--                    <b>(请注意：已发货订单无法撤销)</b>-->
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -202,7 +202,7 @@ error_reporting(0);
                                 <th>订单总额</th>
                                 <th>下单时间</th>
                                 <th>订单详情</th>
-                                <th>撤销订单</th>
+<!--                                <th>撤销订单</th>-->
                             </tr>
                             </thead>
                             <tbody>
@@ -218,39 +218,39 @@ error_reporting(0);
                                         <a class="btn btn-primary"
                                            href="<?php echo site_url('order/detail') . '/' . $v['order_sn']; ?>">订单详情</a>
                                     </td>
-                                    <td>
-                                        <?php if ($v['order_status'] == '未发货') { ?>
-                                            <button class="btn btn-danger" data-toggle="modal"
-                                                    data-target=".bs-example-modal-lg<?php echo $v['order_sn']; ?>">撤销
-                                            </button>
-                                            <div class="modal fade bs-example-modal-lg<?php echo $v['order_sn']; ?>"
-                                                 tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-                                                 aria-hidden="true">
-                                                <div class="modal-dialog modal-lg">
-                                                    <div class="modal-body">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal"
-                                                                        aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title" id="myModalLabel">撤销订单</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>确定撤销此订单吗</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <a class="btn btn-danger"
-                                                                   href="<?php echo site_url('order/delete') . '/' . $v['order_sn']; ?>">确定</a>
-                                                                <a class="btn btn-default" data-dismiss="modal"
-                                                                   aria-hidden="true">取消</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <?php } else { ?>
-                                            <button class="btn btn-danger disabled">撤销</button>
-                                        <?php } ?>
-                                    </td>
+<!--                                    <td>-->
+<!--                                        --><?php //if ($v['order_status'] == '未发货') { ?>
+<!--                                            <button class="btn btn-danger" data-toggle="modal"-->
+<!--                                                    data-target=".bs-example-modal-lg--><?php //echo $v['order_sn']; ?><!--">撤销-->
+<!--                                            </button>-->
+<!--                                            <div class="modal fade bs-example-modal-lg--><?php //echo $v['order_sn']; ?><!--"-->
+<!--                                                 tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"-->
+<!--                                                 aria-hidden="true">-->
+<!--                                                <div class="modal-dialog modal-lg">-->
+<!--                                                    <div class="modal-body">-->
+<!--                                                        <div class="modal-content">-->
+<!--                                                            <div class="modal-header">-->
+<!--                                                                <button type="button" class="close" data-dismiss="modal"-->
+<!--                                                                        aria-hidden="true">&times;</button>-->
+<!--                                                                <h4 class="modal-title" id="myModalLabel">撤销订单</h4>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="modal-body">-->
+<!--                                                                <p>确定撤销此订单吗</p>-->
+<!--                                                            </div>-->
+<!--                                                            <div class="modal-footer">-->
+<!--                                                                <a class="btn btn-danger"-->
+<!--                                                                   href="--><?php //echo site_url('order/delete') . '/' . $v['order_sn']; ?><!--">确定</a>-->
+<!--                                                                <a class="btn btn-default" data-dismiss="modal"-->
+<!--                                                                   aria-hidden="true">取消</a>-->
+<!--                                                            </div>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        --><?php //} else { ?>
+<!--                                            <button class="btn btn-danger disabled">撤销</button>-->
+<!--                                        --><?php //} ?>
+<!--                                    </td>-->
                                 </tr>
                             <?php endforeach; ?>
                             </tbody>

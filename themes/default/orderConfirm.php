@@ -148,7 +148,7 @@ require_once('header.php');
                         </table>
 
                     </div>
-                    <form id="order-form" name="order-form" action="<?php echo site_url('order/add'); ?>" method="post">
+                    <form id="order-form" name="order-form" action="<?php echo site_url('order/do_alipay'); ?>" method="post">
                         <div class="col_half">
                             <label for="order_postscripts">订单附言(可留空)：</label><br>
                             <textarea rows="5" cols="35" name="postscripts" id="postscripts"></textarea>

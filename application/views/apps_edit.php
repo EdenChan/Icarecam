@@ -63,17 +63,17 @@
                                     <div class="controls"><a href="#myAlertBan1" data-toggle="modal"
                                                              class="btn">替换软件图片</a></div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label">软件原文件：</label>
-
-                                    <div class="controls">
-                                        <a href="<?php echo base_url('public/uploads/') . '/' . $apps['apps_file']; ?>">文件下载</a>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="controls"><a href="#myAlertBan2" data-toggle="modal"
-                                                             class="btn">替换软件文件</a></div>
-                                </div>
+<!--                                <div class="control-group">-->
+<!--                                    <label class="control-label">软件原文件：</label>-->
+<!---->
+<!--                                    <div class="controls">-->
+<!--                                        <a href="--><?php //echo base_url('public/uploads/') . '/' . $apps['apps_file']; ?><!--">文件下载</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div class="control-group">-->
+<!--                                    <div class="controls"><a href="#myAlertBan2" data-toggle="modal"-->
+<!--                                                             class="btn">替换软件文件</a></div>-->
+<!--                                </div>-->
                                 <div class="control-group">
                                     <label class="control-label">详细描述：</label>
 

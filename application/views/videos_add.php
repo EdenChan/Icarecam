@@ -49,11 +49,11 @@
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <label class="control-label">是否出现在首页：</label>
-
-                                    <div class="controls">
-                                        <input type="checkbox" name="is_index" value="1"/><span class="help-block">（请注意首页仅可放置1个推荐视频）</span>
-                                    </div>
+                                        <label class="control-label">是否出现在首页：</label>
+                                        <div class="controls">
+                                            <input type="text" id="is_index" name="is_index" value="0"/><br/><span
+                                                class="help-block">（此项填0可设置此视频不在首页展示，此项填1可设置此视频在首页展示，注意首页仅可出现一个展示视频）</span>
+                                        </div>
                                 </div>
                                 <div class="control-group">
                                     <label class="control-label">视频分享代码：</label>

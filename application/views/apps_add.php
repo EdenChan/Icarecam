@@ -54,15 +54,15 @@
                                         <input type="file" name="apps_img"/>
                                     </div>
                                 </div>
-                                <div class="control-group">
-                                    <label class="control-label">上传App压缩文件：</label>
-
-                                    <div class="controls">
-                                        <input type="file" name="apps_file"/>
-
-                                        <p class="help-block">请注意压缩文件仅支持zip/rar格式,且文件名中请勿包含中文</p>
-                                    </div>
-                                </div>
+<!--                                <div class="control-group">-->
+<!--                                    <label class="control-label">上传App压缩文件：</label>-->
+<!---->
+<!--                                    <div class="controls">-->
+<!--                                        <input type="file" name="apps_file"/>-->
+<!---->
+<!--                                        <p class="help-block">请注意压缩文件仅支持zip/rar格式,且文件名中请勿包含中文</p>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="control-group">
                                     <label class="control-label">详细描述：</label>
 

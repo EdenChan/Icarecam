@@ -55,13 +55,14 @@
                                     <?php if ($videos['is_index'] == 1) { ?>
                                         <label class="control-label">从首页移除：</label>
                                         <div class="controls">
-                                            <input type="checkbox" id="is_index" name="is_index" value="0"/><span
-                                                class="help-block">（此视频现在在首页展示，选择此项可从首页的展示位置中移除）</span>
-                                        </div><?php } else { ?>
+                                            <input type="text" id="is_index" name="is_index" value="1"/><br/><span
+                                                class="help-block">（此视频现在在首页展示，此项填0可从首页的展示位置中移除）</span>
+                                        </div>
+                                        <?php } else { ?>
                                         <label class="control-label">设置在首页出现：</label>
                                         <div class="controls">
-                                            <input type="checkbox" id="is_index" name="is_index" value="1"/><span
-                                                class="help-block">（此视频现在并未在首页展示区，可设置此视频在首页展示，注意首页仅可出现一个展示视频）</span>
+                                            <input type="text" id="is_index" name="is_index" value="0"/><br/><span
+                                                class="help-block">（此视频现在并未在首页展示区，此项填1可设置此视频在首页展示，注意首页仅可出现一个展示视频）</span>
                                         </div>
                                     <?php } ?>
                                 </div>

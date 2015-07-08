@@ -42,7 +42,7 @@ require_once('header.php');
                                 <div class="entry-content">
                                     <p><?php echo $v['goods_brief']; ?></p>
                                     <a href="<?php echo site_url('goods/single') . '/' . $v['goods_id']; ?>"
-                                       class="button button-3d button-small button-rounded button-lime button-light">了解更多</a>
+                                       class="button button-3d button-small button-rounded button-lime button-light">立即购买</a>
                                 </div>
                             </div>
                         </div>

@@ -129,7 +129,7 @@
                             <h5>首页优势1</h5>
                         </div>
                         <div class="widget-content">
-                            <textarea name="index_merit_1_desc" id="index_merit_1_desc" cols="50"
+                            <textarea name="index_merit_1_desc" id="index_merit_1_desc" cols="30"
                                       rows="10"><?php echo $index_merit_1['indexInfo_desc']; ?></textarea>
                             <input type="hidden" name="index_merit_1_id"
                                    value="<?php echo $index_merit_1['indexInfo_id']; ?>"/>
@@ -145,7 +145,7 @@
                             <h5>首页优势2</h5>
                         </div>
                         <div class="widget-content">
-                            <textarea name="index_merit_2_desc" id="index_merit_2_desc" cols="50"
+                            <textarea name="index_merit_2_desc" id="index_merit_2_desc" cols="30"
                                       rows="10"><?php echo $index_merit_2['indexInfo_desc']; ?></textarea>
                             <input type="hidden" name="index_merit_2_id"
                                    value="<?php echo $index_merit_2['indexInfo_id']; ?>"/>
@@ -161,7 +161,7 @@
                             <h5>首页优势3</h5>
                         </div>
                         <div class="widget-content">
-                            <textarea name="index_merit_3_desc" id="index_merit_3_desc" cols="50"
+                            <textarea name="index_merit_3_desc" id="index_merit_3_desc" cols="30"
                                       rows="10"><?php echo $index_merit_3['indexInfo_desc']; ?></textarea>
                             <input type="hidden" name="index_merit_3_id"
                                    value="<?php echo $index_merit_3['indexInfo_id']; ?>"/>
