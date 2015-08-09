@@ -165,20 +165,6 @@ class Order extends Home_Controller
                 //如果有做过处理，不执行商户的业务程序
                 /********************************************************************************/
                 /******************************这里是业务逻辑**************************************/
-
-//                $data['alipay_buyer_id'] = $this->input->post('buyer_id');
-//                $data['alipay_buyer_email'] = $this->input->post('buyer_email');
-//                $data['alipay_trade_no'] = $this->input->post('trade_no');//支付宝交易号
-//                $data['ordername'] = $this->input->post('subject');
-//                $data['orderstr'] = $this->input->post('out_trade_no');
-//                $data['price'] = $this->input->post('total_fee');
-//                $data['orderstr'] = $this->input->post('out_trade_no');
-//
-//                logResult($data['ordername']);
-//                //$data['trade_status']=$this->input->get('rade_status');//交易状态
-//                $this->load->Model('alipay_m');
-//                //先要进行订单号和价格的查询比对，ok之后再去修改order，修改pay的状态
-//                $this->alipay_m->porder($data);
                 $this->add();
             }
 
@@ -235,19 +221,6 @@ class Order extends Home_Controller
                 /********************************************************************************/
                 /******************************这里是业务逻辑**************************************/
 
-//                $data['alipay_buyer_id'] = $this->input->post('buyer_id');
-//                $data['alipay_buyer_email'] = $this->input->post('buyer_email');
-//                $data['alipay_trade_no'] = $this->input->post('trade_no');//支付宝交易号
-//                $data['ordername'] = $this->input->post('subject');
-//                $data['orderstr'] = $this->input->post('out_trade_no');
-//                $data['price'] = $this->input->post('total_fee');
-//                $data['orderstr'] = $this->input->post('out_trade_no');
-//
-//                logResult($data['ordername']);
-//                //$data['trade_status']=$this->input->get('rade_status');//交易状态
-//                $this->load->Model('alipay_m');
-//                //先要进行订单号和价格的查询比对，ok之后再去修改order，修改pay的状态
-//                $this->alipay_m->porder($data);
                 $this->add();
             }
 
@@ -311,29 +284,24 @@ class Order extends Home_Controller
             #添加订单信息
             #############################################
 
-            #生成订单号
-//            $year_code = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J');
-//            $data['order_sn'] = $year_code[intval(date('Y')) - 2010] . strtoupper(dechex(date('m'))) . date('d') . substr(time(), -5) . substr(microtime(), 2, 5) . sprintf('d', rand(0, 99));
-//            $data['order_sn'] = $this->input->post('order_sn');
-
+            #从session中获取do_alipay()方法中设置的订单号、快递方式和订单总额、订单附言信息
             $data['order_sn'] = $this->session->userdata('order_sn');
-            #获取购物车总额
-            $data['goods_amount'] = $this->cart->total();
 
             $data['shipping_method'] = $this->session->userdata('shipping_method');
 
             $data['order_amount'] = $this->session->userdata('order_amount');
 
-            #记录快递方式 计算订单总额
+            #获取订单附言
+            $data['postscripts'] = $this->session->userdata('postscripts');
+
+            #获取购物车总额
+            $data['goods_amount'] = $this->cart->total();
 
 
             #获取当前用户id
             $session_name = $this->session->userdata('user');
             $userNow = $this->user_model->get_user_byname($session_name);
             $data['user_id'] = $userNow['user_id'];
-
-            #获取订单附言
-            $data['postscripts'] = $this->session->userdata('postscripts');
 
             #设置订单初始状态
             $data['order_status'] = '未发货';

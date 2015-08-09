@@ -3,9 +3,7 @@ require_once('header.php');
 ?>
     <script type="text/javascript">
         $(document).ready(function () {
-            if (<?php echo $this->cart->total();?><
-            100
-            )
+            if (<?php echo $this->cart->total();?> < 100)
             {
                 $(".shippingMethod").click(function () {
                     if ($(this).attr('id') == "normal") {
